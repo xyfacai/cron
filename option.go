@@ -43,3 +43,9 @@ func WithLogger(logger Logger) Option {
 		c.logger = logger
 	}
 }
+
+func WithSyncModel(syncModel bool) Option {
+	return func(c *Cron) {
+		c.syncModel = syncModel
+	}
+}
